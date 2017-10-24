@@ -7,6 +7,11 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+	<!-- 파일을 전송하기위한 enctype="multpart/form-data" 라이브러리 -->
+	<bean id = "multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="314572800"/>
+	</bean>
+	
 	<!-- Servlet으로 가는 resource폴더에 있지 않은 파일들-->
 	<context:component-scan base-package="com.newlecture.webapp.controller"/>	
 	
