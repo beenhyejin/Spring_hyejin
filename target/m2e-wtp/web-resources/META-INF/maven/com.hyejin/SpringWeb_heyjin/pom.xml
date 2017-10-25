@@ -11,7 +11,6 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.3.11.RELEASE</version>
 		</dependency>
-		
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>

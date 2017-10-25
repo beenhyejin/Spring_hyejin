@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,34 +26,35 @@
 </script>
 </head>
 <body>
-<!-- Ajax로 파일 전송하기와 트리거 그리고 파일목록뷰어 -->
-   <div id="ex3-upload">
-   	<hr>
-      <form action="../../upload" method="post" enctype="multipart/form-data">
-         <div>
-            <input type="submit" value="전송" />
-         </div>
-         <div id="clone-container">
-            <table border="1">
-               <tbody>
-                  <tr>
-                     <td>제목</td>
-                     <td><input type="text" name="title" /></td>
-                  </tr>
-                  <tr>
-                     <td>파일</td>
-                     <td><input type="file" name="file"/></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-      </form>
-      <div>
-      	<ul>
-      		<li></li>
-      	</ul>
-      </div>
-   </div>
-   <hr />
+	<!-- Ajax로 파일 전송하기와 트리거 그리고 파일목록뷰어 -->
+	<div id="ex3-upload">
+		<hr>
+		<form action="../../upload?${_csrf.parameterName}=${_csrf.token}" method="post"
+			enctype="multipart/form-data">
+			<div>
+				<input type="submit" value="전송" />
+			</div>
+			<div id="clone-container">
+				<table border="1">
+					<tbody>
+						<tr>
+							<td>제목</td>
+							<td><input type="text" name="title" /></td>
+						</tr>
+						<tr>
+							<td>파일</td>
+							<td><input type="file" name="file" /></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</form>
+		<div>
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<hr />
 </body>
 </html>
